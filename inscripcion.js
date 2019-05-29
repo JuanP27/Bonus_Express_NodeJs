@@ -16,6 +16,9 @@
 const {materias} = require ('./materias');
 const fs = require('fs');
 
+const express = require('express')
+const app = express()
+
 const argv = require('yargs')
 	.command ('inscribir', 'Realizar incripcion a un curso', opciones)
 	.argv
@@ -51,10 +54,10 @@ let  crearArchivo = (materias)=>{
 	};
 	texto = 'El estudiante ' + argv.nombre + ' con la cedula ' + argv.cedula +' se ha matriculado en el curso de ' + inscMateria.nombre + 
 	' que tiene una duracion de ' + inscMateria.duracion + ' con un valor de ' + inscMateria.valor;
-	fs.writeFile('inscrito.txt', texto, (err) => {
-		if (err) throw (err);
-		console.log('Se ha creado el archivo');
-	});
+	app.get('/', function (req, res) {
+	  res.send(texto)
+	})	 
+	app.listen(3000)
 }
 
 crearArchivo(materias);

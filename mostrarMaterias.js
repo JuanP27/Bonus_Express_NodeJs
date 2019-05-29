@@ -4,7 +4,7 @@ id = 1;
 
 let materiaEst1 = materias.find( materiaEst1 => materiaEst1.id === id)
 setTimeout (function(){
-console.log("\n" + "El curso se llama " + materiaEst1.nombre + ", su codigo es " + materiaEst1.id + " tiene una duracion de " + materiaEst1.duracion + " horas y tiene un valor de " + materiaEst1.valor + " de pesos." + "\n")
+texto1 = ("\n" + "El curso se llama " + materiaEst1.nombre + ", su codigo es " + materiaEst1.id + " tiene una duracion de " + materiaEst1.duracion + " horas y tiene un valor de " + materiaEst1.valor + " de pesos." + "\n")
 },2000);
 
 id = 2;
