@@ -13,7 +13,7 @@
   "author": "Juan Pablo Montoya Restrepo jpmontoya88@hotmail.com",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "yargs": "^13.2.4"
   }
 }
